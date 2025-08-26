@@ -9,6 +9,7 @@ export default configureStore({
     [tmdbApi.reducerPath]: tmdbApi.reducer,
     currentGenreOrCategory: genreOrCategoryReducer,
     user: userReducer,
-
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(tmdbApi.middleware),
+
 });
