@@ -6,12 +6,12 @@ function Pagination({ currentPage, setPage, totalPages }) {
   const classes = useStyles();
 
   const handlePrev = () => {
-    if (currentPage !== 1) {
+    if (currentPage > 1) {
       setPage((prevPage) => prevPage - 1);
     }
   };
   const handleNext = () => {
-    if (currentPage !== totalPages) {
+    if (currentPage < totalPages) {
       setPage((prevPage) => prevPage + 1);
     }
   };
